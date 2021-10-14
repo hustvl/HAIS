@@ -1,8 +1,6 @@
 
 # HAIS
 
----
-
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hierarchical-aggregation-for-3d-instance/3d-instance-segmentation-on-scannetv2)](https://paperswithcode.com/sota/3d-instance-segmentation-on-scannetv2?p=hierarchical-aggregation-for-3d-instance) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hierarchical-aggregation-for-3d-instance/3d-instance-segmentation-on-s3dis)](https://paperswithcode.com/sota/3d-instance-segmentation-on-s3dis?p=hierarchical-aggregation-for-3d-instance)
 
 ## Hierarchical Aggregation for 3D Instance Segmentation (ICCV 2021)
@@ -21,7 +19,7 @@ by Shaoyu Chen, Jiemin Fang, Qian Zhang, Wenyu Liu, Xinggang Wang*. (\*) Corresp
 
 
 ## Introduction
-* HAIS is an efficient and concise bottom-up framework for point cloud instance segmentation. It adopts the  hierarchical aggregation (point aggregation and set aggregation) to generate instances and the intra-instance prediction for outlier filtering and mask quality scoring.
+* HAIS is an efficient and concise bottom-up framework (NMS-free and single-forward) for point cloud instance segmentation. It adopts the  hierarchical aggregation (point aggregation and set aggregation) to generate instances and the intra-instance prediction for outlier filtering and mask quality scoring.
   
 ![Framework](./docs/framework.png)
 
@@ -204,6 +202,11 @@ Please refer to `visualize_open3d.py` for more details.
 
 ## Acknowledgement
 The code is based on [PointGroup](https://github.com/dvlab-research/PointGroup) and [spconv](https://github.com/traveller59/spconv).
+
+
+## Contact
+If you have any questions or suggestions about this repo, please feel free to contact me (shaoyuchen@hust.edu.cn).
+
 
 ## Citation
 ```
