@@ -59,8 +59,8 @@ by Shaoyu Chen, Jiemin Fang, Qian Zhang, Wenyu Liu, Xinggang Wang*. (\*) Corresp
 1\) Environment
 
 * Python 3.x
-* Pytorch 1.1 ~ 1.4
-* CUDA 9.2 or 10.1
+* Pytorch 1.1 or higher
+* CUDA 9.2 or higher
 * gcc-5.4 or higher
 
 Create a conda virtual environment and activate it.
@@ -83,7 +83,17 @@ pip install -r requirements.txt
 conda install -c bioconda google-sparsehash 
 ```
 
-4\) Install [spconv](https://github.com/traveller59/spconv) (Refer to [PointGroup](https://github.com/dvlab-research/PointGroup) for more installation details).
+4\) Install spconv 
+
+*  Verify the version of spconv.
+  
+spconv 1.0, compatible with CUDA < 11 and pytorch < 1.5, is already recursively cloned in `HAIS/lib/spconv` in step 2) by default. 
+
+For higher version CUDA and pytorch, spconv 1.2 is suggested. Replace `HAIS/lib/spconv` with this fork of spconv,
+```
+git clone https://github.com/outsidercsy/spconv.git --recursive
+```
+
 
 *  Install the dependent libraries.
 ```
@@ -103,7 +113,6 @@ cd HAIS/lib/spconv/dist
 pip install {wheel_file_name}.whl
 ```
 
-**Note**: spconv 1.0 is used by default, compatible with CUDA < 11 and pytorch < 1.5. For higher version CUDA and pytorch, please use spconv 1.2.
 
 5\) Compile the external C++ and CUDA ops.
 ```
