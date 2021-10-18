@@ -87,12 +87,13 @@ conda install -c bioconda google-sparsehash
 
 *  Verify the version of spconv.
   
-spconv 1.0, compatible with CUDA < 11 and pytorch < 1.5, is already recursively cloned in `HAIS/lib/spconv` in step 2) by default. 
+      spconv 1.0, compatible with CUDA < 11 and pytorch < 1.5, is already recursively cloned in `HAIS/lib/spconv` in step 2) by default. 
 
-For higher version CUDA and pytorch, spconv 1.2 is suggested. Replace `HAIS/lib/spconv` with this fork of spconv,
+      For higher version CUDA and pytorch, spconv 1.2 is suggested. Replace `HAIS/lib/spconv` with this fork of spconv.
 ```
 git clone https://github.com/outsidercsy/spconv.git --recursive
 ```
+      Note:  spconv\spconv\functional.py is modified to make grad_output contiguous. Make sure you use the modified spconv.
 
 
 *  Install the dependent libraries.
