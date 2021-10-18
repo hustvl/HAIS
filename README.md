@@ -90,7 +90,7 @@ conda install -c bioconda google-sparsehash
       spconv 1.0, compatible with CUDA < 11 and pytorch < 1.5, is already recursively cloned in `HAIS/lib/spconv` in step 2) by default. 
 
       For higher version CUDA and pytorch, spconv 1.2 is suggested. Replace `HAIS/lib/spconv` with this fork of spconv.
-      
+
 ```
 git clone https://github.com/outsidercsy/spconv.git --recursive
 ```
@@ -222,10 +222,12 @@ If you have any questions or suggestions about this repo, please feel free to co
 
 ## Citation
 ```
-@article{chen2021hierarchical,
-      title={Hierarchical Aggregation for 3D Instance Segmentation}, 
-      author={Shaoyu Chen and Jiemin Fang and Qian Zhang and Wenyu Liu and Xinggang Wang},
-      year={2021},
-      journal={arXiv:2108.02350},
+@InProceedings{Chen_2021_ICCV,
+    author    = {Chen, Shaoyu and Fang, Jiemin and Zhang, Qian and Liu, Wenyu and Wang, Xinggang},
+    title     = {Hierarchical Aggregation for 3D Instance Segmentation},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {15467-15476}
 }
 ```
