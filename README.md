@@ -1,13 +1,16 @@
 
-# HAIS
+<div align="center">
+<h1> HAIS </h1>
+<span><font size="5", > Hierarchical Aggregation for 3D Instance Segmentation [ICCV 2021] </font></span>
+<br>
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hierarchical-aggregation-for-3d-instance/3d-instance-segmentation-on-scannetv2)](https://paperswithcode.com/sota/3d-instance-segmentation-on-scannetv2?p=hierarchical-aggregation-for-3d-instance) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hierarchical-aggregation-for-3d-instance/3d-instance-segmentation-on-s3dis)](https://paperswithcode.com/sota/3d-instance-segmentation-on-s3dis?p=hierarchical-aggregation-for-3d-instance)
 
-## Hierarchical Aggregation for 3D Instance Segmentation (ICCV 2021)
+by 
+<br>Shaoyu Chen, Jiemin Fang, Qian Zhang, Wenyu Liu, Xinggang Wang</a><sup><span>&#8224;</span></sup>. (<span>&#8224;</span>: corresponding author)
 
+<div>Paper: <a href="https://arxiv.org/abs/2108.02350">[arXiv version] </a><a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_Hierarchical_Aggregation_for_3D_Instance_Segmentation_ICCV_2021_paper.pdf">  [ICCV21 version]</a></div> 
 
-by Shaoyu Chen, Jiemin Fang, Qian Zhang, Wenyu Liu, Xinggang Wang*. (\*) Corresponding author.
-[[arXiv]](https://arxiv.org/abs/2108.02350) 
+<div>Presentation: <a href="https://drive.google.com/file/d/1zDBqMBHrB077VbJUZdMY1D0LbtdjgpSi/view?usp=sharing">[ICCV21 presentation] </a></div> 
 
 <div align="center">
 <img src="docs/scene0249_00_output_2.gif" width="48%" />
@@ -15,6 +18,28 @@ by Shaoyu Chen, Jiemin Fang, Qian Zhang, Wenyu Liu, Xinggang Wang*. (\*) Corresp
 </div>
 
 <br>
+</div>
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hierarchical-aggregation-for-3d-instance/3d-instance-segmentation-on-scannetv2)](https://paperswithcode.com/sota/3d-instance-segmentation-on-scannetv2?p=hierarchical-aggregation-for-3d-instance) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/hierarchical-aggregation-for-3d-instance/3d-instance-segmentation-on-s3dis)](https://paperswithcode.com/sota/3d-instance-segmentation-on-s3dis?p=hierarchical-aggregation-for-3d-instance)
+
+
+
+## Update
+#### 2022.4.28:
+* HAIS serves as a baseline of [STPLS3D](https://www.stpls3d.com/) dataset. Code of HAIS on [STPLS3D](https://www.stpls3d.com/) is available on <a href="https://github.com/meidachen/STPLS3D">[this Github repo] </a>.
+[STPLS3D](https://www.stpls3d.com/) is a large-scale photogrammetry 3D point cloud dataset, composed of high-quality, rich-annotated point clouds from real-world and synthetic environments.
+<div align="center">
+<div><span><font size="3", > <a href="https://www.stpls3d.com/"> STPLS3D: </a>   &nbsp  <a href="https://www.stpls3d.com/">[Dataset Website] </a>   &nbsp <a href="https://arxiv.org/pdf/2203.09065.pdf">[Paper] </a>  &nbsp <a href="https://github.com/meidachen/STPLS3D">[Github] </a>  </span></div> 
+</div> 
+
+
+![STPLS3D_Learderboard](./docs/STPLS3D_leaderboard.png)
+
+
+
+#### 2021.9.30: 
+* Code is released.
+* With better CUDA optimization, HAIS now only takes 339 ms on TITAN X, much better than the latency reported in the paper (410 ms on TITAN X).
 
 
 
@@ -29,7 +54,6 @@ by Shaoyu Chen, Jiemin Fang, Qian Zhang, Wenyu Liu, Xinggang Wang*. (\*) Corresp
 
 * **High speed**. Thanks to the NMS-free and single-forward inference design, HAIS achieves the best inference speed among all existing methods. HAIS only takes **206 ms** on RTX 3090 and **339 ms** on TITAN X.
 
-
 |  Method   | Per-frame latency on TITAN X|
 | :-: | :-: |
 |ASIS|181913 ms|
@@ -42,16 +66,6 @@ by Shaoyu Chen, Jiemin Fang, Qian Zhang, Wenyu Liu, Xinggang Wang*. (\*) Corresp
 |PointGroup|452 ms|
 |**HAIS**|**339 ms**|
 
-[[ICCV21 presentation]](https://drive.google.com/file/d/1zDBqMBHrB077VbJUZdMY1D0LbtdjgpSi/view?usp=sharing)
-
-
-
-
-## Update
-
-#### 2021.9.30: 
-* Code is released.
-* With better CUDA optimization, HAIS now only takes 339 ms on TITAN X, much better than the latency reported in the paper (410 ms on TITAN X).
 
 
 ## Installation
@@ -213,21 +227,21 @@ Please refer to `visualize_open3d.py` for more details.
 
 
 ## Acknowledgement
-The code is based on [PointGroup](https://github.com/dvlab-research/PointGroup) and [spconv](https://github.com/traveller59/spconv).
+The code is based on [PointGroup](https://github.com/dvlab-research/PointGroup) and [spconv](https://github.com/traveller59/spconv). And thank [STPLS3D](https://www.stpls3d.com/) for extending HAIS.
 
 
 ## Contact
 If you have any questions or suggestions about this repo, please feel free to contact me (shaoyuchen@hust.edu.cn).
 
 
-## Citation
-```
-@InProceedings{Chen_2021_ICCV,
+## Citing HAIS
+If you find HAIS is useful in your research or applications, please consider giving us a star &#127775; and citing HAIS by the following BibTeX entry.
+
+```BibTeX
+@InProceedings{Chen_HAIS_2021_ICCV,
     author    = {Chen, Shaoyu and Fang, Jiemin and Zhang, Qian and Liu, Wenyu and Wang, Xinggang},
     title     = {Hierarchical Aggregation for 3D Instance Segmentation},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
+    booktitle = {ICCV},
     year      = {2021},
-    pages     = {15467-15476}
 }
 ```
