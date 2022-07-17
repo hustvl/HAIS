@@ -13,8 +13,8 @@ by
 <div>Presentation: <a href="https://drive.google.com/file/d/1zDBqMBHrB077VbJUZdMY1D0LbtdjgpSi/view?usp=sharing">[ICCV21 presentation] </a></div> 
 
 <div align="center">
-<img src="docs/scene0249_00_output_2.gif" width="48%" />
-<img src="docs/scene0430_00_output_2.gif" width="48%" />
+<img src="docs/scene0249_00_output_2.gif" width="70%" />
+<!-- <img src="docs/scene0430_00_output_2.gif" width="48%" /> -->
 </div>
 
 <br>
@@ -224,6 +224,13 @@ pip install open3D==0.8.0
 python visualize_open3d.py --data_path {} --prediction_path {} --data_split {} --room_name {} --task {}
 ```
 Please refer to `visualize_open3d.py` for more details.
+
+Demo:
+<div align="center">
+<!-- <img src="docs/scene0249_00_output_2.gif" width="48%" /> -->
+<img src="docs/scene0430_00_output_2.gif" width="70%" />
+</div>
+
 
 
 ## Acknowledgement
